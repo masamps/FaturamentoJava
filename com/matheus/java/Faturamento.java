@@ -6,6 +6,7 @@ public class Faturamento {
     public static void main(String[] args) {
 
         int optMenu;
+        double ValorTotal;
 
         Scanner scan = new Scanner(System.in);
 
@@ -21,7 +22,8 @@ public class Faturamento {
             case 1:
                 System.out.println("******** Compra ********");
                 compra.Produtos();
-                compra.precoProduto();
+                ValorTotal = compra.getValorTotal();
+                compra.Pagamento();
                 break;
             case 2:
                 System.out.println("******** Saldo ********");
