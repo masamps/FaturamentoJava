@@ -1,14 +1,11 @@
 package com.matheus.java;
-
 import java.util.Scanner;
 
 public class Faturamento {
 
     public static void main(String[] args) {
 
-        int optMenu, qtdItem;
-        String nomeItem;
-
+        int optMenu;
 
         Scanner scan = new Scanner(System.in);
 
@@ -18,21 +15,21 @@ public class Faturamento {
         System.out.println(" 3 - Sair");
         optMenu = scan.nextInt();
 
+        Compra compra = new Compra();
 
-            switch (optMenu){
-                case 1:
-                    System.out.println("******** Compra ********");
-                    System.out.println("");
-                    System.out.println("Digite o nome do Item: ");
-
-                    break;
-                case 2:
-                    System.out.println("******** Saldo ********");
-                    break;
-                case 3:
-                    System.out.println("Obrigado pela preferÃªncia");
-                    break;
-                }
+        switch (optMenu){
+            case 1:
+                System.out.println("******** Compra ********");
+                compra.Produtos();
+                compra.precoProduto();
+                break;
+            case 2:
+                System.out.println("******** Saldo ********");
+                break;
+             case 3:
+                 System.out.println("Obrigado pela preferência");
+                 break;
+        }
     }
 
 }
