@@ -1,5 +1,6 @@
 package com.matheus.java;
 
+
 import java.util.Scanner;
 
 public class Compra  {
@@ -22,4 +23,4 @@ public class Compra  {
     void precoProduto(){
         System.out.println("Valor total da Compra é de: " + (valorItem * qtdItem));
     }
-}
+
