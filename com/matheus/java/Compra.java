@@ -1,16 +1,16 @@
 package com.matheus.java;
 
-
 import java.util.Scanner;
 
 public class Compra {
 
     int qtdItem, condPagamento;
-    double valorItem;
-    public double valorTotal;
+    double valorItem, saldoTotal, valordinheiro;
+    double valorTotal;
     String nomeItem;
 
     Scanner scan = new Scanner(System.in);
+    Saldo saldo = new Saldo();
 
     // Cadastro de Produto
     void Produtos() {
@@ -40,17 +40,38 @@ public class Compra {
         System.out.println("Digite sua forma de pagamento: ");
         condPagamento = scan.nextInt();
 
-        if (condPagamento!=1 || condPagamento!=4){
-            System.out.println("Valor total Pago foi de : R$" + valorTotal);
-            System.out.println("Obrigado pela compra");
-        }
-        else{
-            System.out.println("Digite o valor a pagar: ");
-        }
-    }
+        saldoTotal = saldo.getSaldoInicial();
 
-    public int getCondPagamento() {
-        return condPagamento;
+        switch (condPagamento){
+            case 1:
+                System.out.println("Digite o valor em dinheiro: ");
+                valordinheiro = scan.nextDouble();
+                if(valordinheiro<valorTotal){
+                    System.out.println("Faltou dinheiro!");
+                }
+                else if (valordinheiro>valorTotal){
+                    System.out.println("Seu troco e de: R$" +(valordinheiro - valorTotal));
+                }
+                else{
+                    System.out.println("Obrigado pela compra!");
+                }
+                break;
+            case 2:
+                System.out.println("Valor total Pago foi de : R$" + valorTotal);
+                System.out.println("Obrigado pela compra");
+                break;
+            case 3:
+                System.out.println("Valor total Pago foi de : R$" + valorTotal);
+                System.out.println("Obrigado pela compra");
+                break;
+            case 4:
+                if (saldoTotal >= valorTotal) {
+                System.out.println("Saldo restante e de: R$"+(saldoTotal - valorTotal));
+            }
+            else System.out.println("Saldo Insuficiente, compra nao concluida!");
+                break;
+        }
+
     }
 
 }

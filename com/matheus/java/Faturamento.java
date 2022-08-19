@@ -9,14 +9,14 @@ public class Faturamento {
         double ValorTotal;
 
         Scanner scan = new Scanner(System.in);
+        Compra compra = new Compra();
+        Saldo saldo = new Saldo();
 
         System.out.println("******** Sistema de Compras ********");
         System.out.println(" 1 - Compra de Produto");
         System.out.println(" 2 - Consultar saldo");
         System.out.println(" 3 - Sair");
         optMenu = scan.nextInt();
-
-        Compra compra = new Compra();
 
         switch (optMenu){
             case 1:
@@ -27,6 +27,8 @@ public class Faturamento {
                 break;
             case 2:
                 System.out.println("******** Saldo ********");
+                saldo.incluirSaldo();
+                System.out.println("Seu saldo e de: R$"+(saldo.getSaldoInicial()));
                 break;
              case 3:
                  System.out.println("Obrigado pela preferência");
