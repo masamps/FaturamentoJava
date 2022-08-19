@@ -21,7 +21,7 @@ public class Faturamento {
         System.out.println(" 2 - Consultar saldo");
         System.out.println(" 3 - Sair");
         optMenu = scan.nextInt();
-        
+
             switch (optMenu) {
                 case 1:
                     System.out.println("******** Compra ********");
@@ -34,6 +34,8 @@ public class Faturamento {
                     break;
                 case 3:
                     break;
+                default:
+                    System.out.println("Opção invalida!");
             }
         }while (optMenu!=3);
 

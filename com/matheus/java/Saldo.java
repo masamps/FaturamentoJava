@@ -2,7 +2,7 @@ package com.matheus.java;
 
 import java.util.Scanner;
 
-public class Saldo {
+public class Saldo  {
 
     double saldoInicial,saldoAdicionar;
     int optMenu;

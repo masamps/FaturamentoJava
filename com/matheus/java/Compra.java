@@ -2,7 +2,7 @@ package com.matheus.java;
 
 import java.util.Scanner;
 
-public class Compra {
+public class Compra extends Saldo{
 
     int qtdItem, condPagamento;
     double valorItem, saldoTotal, valordinheiro;
@@ -24,12 +24,10 @@ public class Compra {
         valorTotal = (valorItem * qtdItem);
         System.out.println("Valor total da Compra é de: " + valorTotal);
 
-        saldoTotal = saldo.getSaldoInicial();
+        saldoTotal = saldo.saldoInicial;
         System.out.println("" + saldoTotal);
 
     }
-
-
 
     public double getValorTotal() {
         return valorTotal;
