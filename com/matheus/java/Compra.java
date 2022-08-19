@@ -23,7 +23,13 @@ public class Compra {
 
         valorTotal = (valorItem * qtdItem);
         System.out.println("Valor total da Compra é de: " + valorTotal);
+
+        saldoTotal = saldo.getSaldoInicial();
+        System.out.println("" + saldoTotal);
+
     }
+
+
 
     public double getValorTotal() {
         return valorTotal;
@@ -41,6 +47,7 @@ public class Compra {
         condPagamento = scan.nextInt();
 
         saldoTotal = saldo.getSaldoInicial();
+        System.out.println("" + saldoTotal);
 
         switch (condPagamento){
             case 1:
@@ -67,8 +74,10 @@ public class Compra {
             case 4:
                 if (saldoTotal >= valorTotal) {
                 System.out.println("Saldo restante e de: R$"+(saldoTotal - valorTotal));
-            }
-            else System.out.println("Saldo Insuficiente, compra nao concluida!");
+                }
+                else if (saldoTotal < valorTotal){
+                    System.out.println("Saldo Insuficiente, compra nao concluida!");
+                }
                 break;
         }
 

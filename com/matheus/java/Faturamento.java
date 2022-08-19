@@ -12,6 +12,9 @@ public class Faturamento {
         Compra compra = new Compra();
         Saldo saldo = new Saldo();
 
+
+        saldo.incluirSaldo();
+
         System.out.println("******** Sistema de Compras ********");
         System.out.println(" 1 - Compra de Produto");
         System.out.println(" 2 - Consultar saldo");
@@ -27,7 +30,6 @@ public class Faturamento {
                 break;
             case 2:
                 System.out.println("******** Saldo ********");
-                saldo.incluirSaldo();
                 System.out.println("Seu saldo e de: R$"+(saldo.getSaldoInicial()));
                 break;
              case 3:

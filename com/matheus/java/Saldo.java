@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class Saldo {
 
-    int saldoInicial;
-
+    double saldoInicial;
     Scanner scan = new Scanner(System.in);
-
     void incluirSaldo(){
         System.out.println("Digite o Saldo inicial: ");
-        saldoInicial = scan.nextInt();
+        saldoInicial = scan.nextDouble();
     }
 
-    public int getSaldoInicial() {
+    public double getSaldoInicial() {
         return saldoInicial;
     }
+    
 }
+
+
