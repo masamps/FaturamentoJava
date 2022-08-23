@@ -2,15 +2,14 @@ package com.matheus.java;
 
 import java.util.Scanner;
 
-public class Compra extends Saldo{
+public class Compra{
 
     int qtdItem, condPagamento;
-    double valorItem, saldoTotal, valordinheiro;
+    double valorItem, saldoTotal, valordinheiro,saldoAtual;
     double valorTotal;
     String nomeItem;
 
     Scanner scan = new Scanner(System.in);
-    Saldo saldo = new Saldo();
 
     // Cadastro de Produto
     void Produtos() {
@@ -22,10 +21,7 @@ public class Compra extends Saldo{
         qtdItem = scan.nextInt();
 
         valorTotal = (valorItem * qtdItem);
-        System.out.println("Valor total da Compra é de: " + valorTotal);
-
-        saldoTotal = saldo.saldoInicial;
-        System.out.println("" + saldoTotal);
+        System.out.println("Valor total da Compra e de: " + valorTotal);
 
     }
 
@@ -34,7 +30,7 @@ public class Compra extends Saldo{
     }
 
     // Forma de pagamento
-    void Pagamento() {
+    void Pagamento(double saldoTotal) {
         System.out.println("******** Formas de Pagamento ********");
         System.out.println("1 - Dinheiro");
         System.out.println("2 - Cartao Crédito/Débito");
@@ -44,7 +40,6 @@ public class Compra extends Saldo{
         System.out.println("Digite sua forma de pagamento: ");
         condPagamento = scan.nextInt();
 
-        saldoTotal = saldo.getSaldoInicial();
         System.out.println("" + saldoTotal);
 
         switch (condPagamento){
@@ -72,6 +67,7 @@ public class Compra extends Saldo{
             case 4:
                 if (saldoTotal >= valorTotal) {
                 System.out.println("Saldo restante e de: R$"+(saldoTotal - valorTotal));
+                saldoAtual = saldoTotal - valorTotal;
                 }
                 else if (saldoTotal < valorTotal){
                     System.out.println("Saldo Insuficiente, compra nao concluida!");
@@ -81,4 +77,7 @@ public class Compra extends Saldo{
 
     }
 
+    public double getSaldoAtual() {
+        return saldoAtual;
+    }
 }

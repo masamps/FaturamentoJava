@@ -13,12 +13,12 @@ public class Saldo  {
         System.out.println("1 - Consultar saldo");
         System.out.println("2 - Adicionar saldo");
         System.out.println("3 - Sair");
-        System.out.print("Digite sua opção: ");
+        System.out.print("Digite sua opcao: ");
         optMenu = scan.nextInt();
 
             switch (optMenu) {
                 case 1:
-                    System.out.println("Seu saldo é de: R$" + saldoInicial);
+                    System.out.println("Seu saldo e de: R$" + saldoInicial);
                     break;
                 case 2:
                     adicionarSaldo();
@@ -38,13 +38,16 @@ public class Saldo  {
         System.out.println("Digite o saldo a adicionar:");
         saldoAdicionar = scan.nextDouble();
         saldoInicial+=saldoAdicionar;
-        System.out.println("Seu saldo atual é de: R$"+saldoInicial);
+        System.out.println("Seu saldo atual e de: R$"+saldoInicial);
     }
 
     public double getSaldoInicial() {
         return saldoInicial;
     }
-    
+
+    public void setSaldoInicial(double saldoInicial) {
+        this.saldoInicial = saldoInicial;
+    }
 }
 
 
