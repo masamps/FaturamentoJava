@@ -26,7 +26,7 @@ public class Faturamento {
 
             switch (optMenu) {
                 case 1:
-
+                    cliente.menuCliente();
                     break;
                 case 2:
                     compra.Produtos();
