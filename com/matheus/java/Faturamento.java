@@ -11,34 +11,37 @@ public class Faturamento {
         Scanner scan = new Scanner(System.in);
         Compra compra = new Compra();
         Saldo saldo = new Saldo();
+        Cliente cliente = new Cliente();
 
 
         saldo.incluirSaldo();
 
         do {
         System.out.println("******** Sistema de Compras ********");
-        System.out.println(" 1 - Compra de Produto");
-        System.out.println(" 2 - Saldo");
-        System.out.println(" 3 - Sair");
+        System.out.println(" 1 - Cliente");
+        System.out.println(" 2 - Compra");
+        System.out.println(" 3 - Saldo");
+        System.out.println(" 4 - Sair");
         optMenu = scan.nextInt();
 
             switch (optMenu) {
                 case 1:
-                    System.out.println("******** Compra ********");
+
+                    break;
+                case 2:
                     compra.Produtos();
-                    //ValorTotal = compra.getValorTotal();
                     compra.Pagamento(saldo.getSaldoInicial());
                     saldo.setSaldoInicial(compra.getSaldoAtual());
                     break;
-                case 2:
+                case 3:
                     saldo.menuSaldo();
                     break;
-                case 3:
+                case 4:
                     break;
                 default:
                     System.out.println("Opcao invalida!");
             }
-        }while (optMenu!=3);
+        }while (optMenu!=4);
 
         System.out.println("Obrigado pela preferencia");
     }

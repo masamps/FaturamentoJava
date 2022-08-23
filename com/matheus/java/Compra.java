@@ -13,6 +13,7 @@ public class Compra{
 
     // Cadastro de Produto
     void Produtos() {
+        System.out.println("******** Compra ********");
         System.out.println("Digite o nome do item: ");
         nomeItem = scan.next();
         System.out.println("Digite o valor do item: ");
