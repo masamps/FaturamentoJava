@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Compra{
 
-    int qtdItem, condPagamento;
-    double valorItem, saldoTotal, valordinheiro,saldoAtual;
-    double valorTotal;
+    private int qtdItem, condPagamento;
+    private double valorItem, saldoTotal, valordinheiro,saldoAtual;
+    private double valorTotal;
     String nomeItem;
 
     Scanner scan = new Scanner(System.in);

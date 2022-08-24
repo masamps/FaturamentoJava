@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Saldo  {
 
-    double saldoInicial,saldoAdicionar;
-    int optMenu;
+    private double saldoInicial,saldoAdicionar;
+    private int optMenu;
     Scanner scan = new Scanner(System.in);
 
     void menuSaldo(){
