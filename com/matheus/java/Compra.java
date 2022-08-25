@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Compra{
 
-    private int qtdItem, condPagamento;
+    private int qtdItem, condPagamento, optMenu;
     private double valorItem, saldoTotal, valordinheiro,saldoAtual;
     private double valorTotal;
+
     String nomeItem;
 
     Scanner scan = new Scanner(System.in);
@@ -20,7 +21,6 @@ public class Compra{
         valorItem = scan.nextDouble();
         System.out.println("Digite a quantidade do item: ");
         qtdItem = scan.nextInt();
-
         valorTotal = (valorItem * qtdItem);
         System.out.println("Valor total da Compra e de: " + valorTotal);
 
