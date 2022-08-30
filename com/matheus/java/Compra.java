@@ -26,10 +26,6 @@ public class Compra{
 
     }
 
-    public double getValorTotal() {
-        return valorTotal;
-    }
-
     // Forma de pagamento
     void Pagamento(double saldoTotal) {
         System.out.println("******** Formas de Pagamento ********");
