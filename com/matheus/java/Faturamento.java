@@ -13,11 +13,13 @@ public class Faturamento {
         Saldo saldo = new Saldo();
         Cliente cliente = new Cliente();
         Historico historico = new Historico();
+        TesteBloco bloco = new TesteBloco();
 
 
         saldo.incluirSaldo();
 
         do {
+            bloco.Teste();
         System.out.println("******** Sistema de Compras ********");
         System.out.println(" 1 - Cliente");
         System.out.println(" 2 - Compra");

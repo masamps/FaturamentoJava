@@ -23,7 +23,7 @@ public class Cliente {
                     cadastrarCliente();
                     break;
                 case 2:
-                    System.out.println(getNome());
+                    System.out.println("Seu cliente cadastrado e o: " + getNome());
                     break;
                 case 3:
                     break;
